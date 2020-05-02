@@ -23,7 +23,6 @@ public class GameScorePanelService implements IGameScorePanelService {
 
             resultService.showResult(players);
 
-            players.forEach(System.out::println);
         } catch (Exception e) {
             e.printStackTrace();
         }

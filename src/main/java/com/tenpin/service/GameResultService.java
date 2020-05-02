@@ -5,6 +5,7 @@ import com.tenpin.model.Player;
 import com.tenpin.service.interfaces.IGameResultService;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 public class GameResultService implements IGameResultService {
@@ -59,7 +60,7 @@ public class GameResultService implements IGameResultService {
             } else {
                 sb.append(firstScore == 10 ? "X" : firstScore);
                 sb.append("\t");
-                sb.append(secondScore);
+                sb.append(Optional.ofNullable(secondScore).orElse(0));
                 if (frame.getRound() == 10) {
                     sb.append("\t");
                     sb.append(finalScore);
