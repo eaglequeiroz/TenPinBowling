@@ -10,7 +10,7 @@ public class Main {
         IGameScorePanelService service = new GameScorePanelService();
 
         if (args.length == 0){
-            args = new String[]{"/home/igor/Documentos/game.txt"};
+            args = new String[]{"/home/igor/Documentos/singleplayer.txt"};
         }
 
         service.showPanel(args[0]);

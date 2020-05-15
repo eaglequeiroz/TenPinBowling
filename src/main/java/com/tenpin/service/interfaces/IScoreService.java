@@ -4,5 +4,7 @@ import com.tenpin.model.Player;
 
 public interface IScoreService {
 
-    Player calculatePlayerScores(Player player);
+    Player buildFrames(Player player);
+
+    Player calculateScores(Player player);
 }

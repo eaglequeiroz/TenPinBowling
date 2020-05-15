@@ -19,7 +19,8 @@ public class GameScorePanelService implements IGameScorePanelService {
         try {
             List<Player> players = playersService.getPlayers(filePath);
 
-            players.forEach(scoreService::calculatePlayerScores);
+            players.forEach(scoreService::buildFrames);
+            //players.forEach(scoreService::calculateScores);
 
             resultService.showResult(players);
 

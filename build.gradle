@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
     id "io.freefair.lombok" version "5.0.1"
 }
 
@@ -14,6 +15,10 @@ jar {
     manifest {
         attributes 'Main-Class': 'com.tenpin.Main'
     }
+}
+
+application {
+    mainClassName = 'com.tenpin.Main'
 }
 
 dependencies {
